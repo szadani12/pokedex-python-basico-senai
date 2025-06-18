@@ -1,4 +1,6 @@
 # 📔 POKEDEX EM PYTHON
+![20250618_1319_Pokedex Analisando Pikachu_simple_compose_01jy1xaft7ez3bky928q1q5jhz](https://github.com/user-attachments/assets/aa083620-e73c-4fb8-a8e0-f95d11694add)
+
 
 **Descrição do Projeto:**  
 Este é um projeto simples de uma **Pokedex em Python**, desenvolvido como atividade prática para os alunos do curso Técnico em Desenvolvimento de Sistemas do SENAI DF.
