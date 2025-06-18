@@ -1,7 +1,7 @@
 # 📔 POKEDEX EM PYTHON
 
 **Descrição do Projeto:**  
-Este é um projeto simples de uma **Pokedex em Python**, desenvolvido como atividade prática para os alunos do curso Técnico em Desenvolvimento de Sistemas do SENAI DF e UNB.
+Este é um projeto simples de uma **Pokedex em Python**, desenvolvido como atividade prática para os alunos do curso Técnico em Desenvolvimento de Sistemas do SENAI DF.
 
 **Objetivo:**  
 Praticar conceitos de:
