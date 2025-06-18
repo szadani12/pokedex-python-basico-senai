@@ -9,6 +9,7 @@
 pokedex = [
     {"nome": "Pikachu", "tipo": "Elétrico", "forca": 55},
     {"nome": "Charmander", "tipo": "Fogo", "forca": 52},
+    {"nome": "Butterfree", "tipo": "inseto", "forca": 51},
     {"nome": "Bulbasaur", "tipo": "Grama", "forca": 49},
     {"nome": "Squirtle", "tipo": "Água", "forca": 48},
     {"nome": "Eevee", "tipo": "Normal", "forca": 50}
@@ -20,9 +21,10 @@ def menu():
         print("\n==============================")
         print("         POKEDEX PYTHON")
         print("==============================")
-        print("1️⃣  Listar todos os Pokémon")
-        print("2️⃣  Ver detalhes de um Pokémon")
-        print("3️⃣  Sair")
+        print("1️⃣   LISTAR TODOS OS POKÉMONS")
+        print("2️⃣   VER DETALHES DE UM POKÉMON")
+        print("3️⃣   ADICIONAR UM NOVO POKÉMON")
+        print("4️⃣   SAIR")
         print("==============================")
 
         opcao = input("Escolha uma opção: ")
@@ -32,6 +34,9 @@ def menu():
         elif opcao == "2":
             buscar_pokemon()
         elif opcao == "3":
+            adicionar_pokemon()
+            break
+        elif opcao == "4":
             print("\nSaindo da Pokedex. Até logo, treinador!")
             break
         else:
@@ -60,6 +65,28 @@ def buscar_pokemon():
             break
     if not encontrado:
         print("\n Pokémon não encontrado na Pokedex.")
+
+# Função para adicionar um novo Pokémon à Pokedex
+def adicionar_pokemon():
+    nome = input("Digite o nome do novo Pokémon: ").capitalize()
+    tipo = input("Digite o tipo do novo Pokémon: ")
+    while True: 
+        try:
+            forca = int(input("Digite a força do Pokémon (número inteiro):  "))
+            if forca < 0:
+                print("Força deve ser um número inteiro positivo. Tente novamente.")
+                continue
+            break
+        except ValueError:
+            print("Entrada inválida. Por favor, digite um número inteiro para a força.")
+
+    # Adiciona o novo pokemón à lista
+    pokedex.append({"nome": nome, "tipo": tipo, "forca" : forca})
+    print(f"\n{nome} foi adicionado À Pokedex!")
+
+    # Listar pokémon novamente para mostrar a atualização
+    listar_pokemon()
+    menu()
 
 # Executar o menu
 menu()
